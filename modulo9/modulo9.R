@@ -2,14 +2,15 @@
 # Spatial cluster detection using SpatialEpi R package
 #-------------------------
 
-#install.packages("dplyr")
-#install.packages("ggplot2")
-#install.packages("SpatialEpi")
-#install.packages("stringr")
-#install.packages("olsrr")
-#install.packages("tidyverse")
-#install.packages("dynamac")
+install.packages("dplyr")
+install.packages("ggplot2")
+install.packages("SpatialEpi")
+install.packages("stringr")
+install.packages("olsrr")
+install.packages("tidyverse")
+install.packages("dynamac")
 install.packages("TSstudio")
+
 library(dplyr)
 library(ggplot2)
 library(SpatialEpi)
@@ -42,8 +43,6 @@ y <- as.character(str_split(round(sightings$decimalLongitude, 0), '.', n = 1))
 sightings$x <- x
 sightings$y <- y
 sightings$coords <- paste(x, y, sep = ',')
-
-
 
 
 #as.data.frame(filter(sightings, sightings$countryCode == 'EC'))
